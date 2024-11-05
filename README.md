@@ -55,7 +55,8 @@
 - [x] 增加注册页面显示邀请码
 - [x] 增加第三方授权登录注册aff支持
 - [x] 增加令牌用量公共开放查询支持
-- [ ] 增加FluxAPI的支持
+- [x] 增加black-forest-labs/flux的支持
+- [x] 增加recraft-ai的支持
 - [ ] 增加StabilityAI API的支持
 - [ ] 增加可灵API的支持
 - [ ] 增加对话模型请求字段过滤支持
