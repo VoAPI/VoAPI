@@ -57,7 +57,9 @@
 - [x] 增加令牌用量公共开放查询支持
 - [x] 增加black-forest-labs/flux的支持
 - [x] 增加recraft-ai的支持
-- [ ] 增加StabilityAI API的支持
+- [x] 增加ideogram-ai的支持
+- [x] 增加stability-ai的支持
+- [x] 增加ibm-granite的支持
 - [ ] 增加可灵API的支持
 - [ ] 增加对话模型请求字段过滤支持
 
