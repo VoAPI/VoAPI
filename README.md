@@ -71,6 +71,7 @@
 - [x] 增加ideogram-ai的支持
 - [x] 增加stability-ai的支持
 - [x] 增加ibm-granite的支持
+- [x] 增加空回复重试错误返回支持
 - [ ] 增加可灵API的支持
 - [ ] 增加对话模型请求字段过滤支持
 
