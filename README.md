@@ -198,15 +198,15 @@ docker-compose pull && docker-compose up -d
 
 ## 界面截图
 ### PC端
-- 首页
-![](./images/1.png)
-- 首页（亮色模式）
-![](./images/2.png)
-- 配置页面
-![](./images/4.png)
-- 配置页面
-![](./images/5.png)
-### 移动端
-- 首页
-![](./images/3.png)
+#### 首页
+![](./images/home.png)
+#### 运营配置页
+![](./images/setting2.png)
+#### 其他配置页
+![](./images/setting.png)
 
+### 移动端
+#### 首页
+![](./images/home-mobile.png)
+#### 菜单展开
+![](./images/menu-mobile.png)
