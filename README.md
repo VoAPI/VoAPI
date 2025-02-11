@@ -167,6 +167,13 @@ docker-compose pull && docker-compose up -d
 -  `qas`：`array` 问答列表
     - `q`：`string` 问题
     - `a`：`string` 答案
+- `advantages`：`array` 优势列表
+    - `content`：`string` 标题
+    - `extra`：`string` 描述
+    - `icon`：`string` 图标class name
+    - `color`：`string` 颜色
+- `hideAdvantages`：`bool` 是否隐藏优势
+- `advantageImg`：`string` 优势左侧占位图
 
 ## 模型信息/厂商信息示例
 - 模型信息
