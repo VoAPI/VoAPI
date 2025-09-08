@@ -31,10 +31,12 @@ POST   /v1/messages
 POST   /v1/messages/count_tokens 
 # Google
 POST   /v1beta/models/{model}       
-POST   /v1/models/{model}      
+POST   /v1/models/{model}
+# BigModel
+POST   /v1/agents
 ```
 
-🧑‍🎓 社区版中当前仅支持OpenAI/Anthropic/Google三种端点规范入口，若上述的端点入口没有您所需要的，可以在issue中说一下，若方便集成会一便集成；
+🧑‍🎓 社区版中当前支持OpenAI/Anthropic/Google/BigModel四种端点规范入口，若上述的端点入口没有您所需要的，可以在issue中说一下，若方便集成会一便集成；
 
 🌈 当然我们也在高阶版本中支持了动态路径透传，以达到可以自定义规范集成任意第三方AI模型能力支持；
 
