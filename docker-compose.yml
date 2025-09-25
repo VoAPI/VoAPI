@@ -46,6 +46,7 @@ services:
     volumes:
       - ./config.yml:/config.yml    
       - ./file:/file       
+      - ./public:/public       
     ports:
       - "6800:6800"
 
