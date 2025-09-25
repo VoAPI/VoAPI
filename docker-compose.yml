@@ -22,18 +22,15 @@ services:
     command: --max_connections=50000 --innodb-redo-log-capacity=20G
 
   voapi-app:
-    image: alpine:latest     
+    image: voapi:latest   
+    restart: always  
     container_name: voapi-app
     depends_on:
       - db-voapi
       - redis-voapi
-    working_dir: /app
     hostname: voapi-1
-    environment:
-      VO_SK:
     volumes:
-      - ./app:/app             
-    command: ["./voapi-linux-amd64"]
+      - ./data:/data             
     ports:
       - "6800:6800"
     restart: unless-stopped

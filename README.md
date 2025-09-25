@@ -42,8 +42,30 @@
 |Pro专属功能，暂不公布|❌|✅|
 |实际功能不止上述描述，快去体验体验吧～|✅|✅|
 
-> [!WARNING]
-> **本系统为闭源免授权使用，仅供个人非商业使用。**
+## 部署
+### Docker Compose部署
+```sh 
+git clone git@github.com:VoAPI/VoAPI.git
+cd VoAPI
+docker-compose up -d
+```
+
+## 配置文件
+- config.yml
+```yaml
+app:
+  port: 6800 # 应用监听端口
+mysql:
+  dsn: root:@tcp(localhost:3307)/voapi # 主数据据库
+  log-dsn: root:@tcp(localhost:3307)/voapi-log # 日志分离数据库
+  log-body-dsn: root:@tcp(localhost:3307)/voapi-body-log # 请求体日志分离数据库
+  log-sharding: # 日志分表方式，支持 day/week/month/year 四种方式
+    enable: true
+    mode: y # d = day, w = week, m = month, y = year
+redis:
+  dsn: redis://localhost:6379/0
+  pool-size: 0 #redis连接池大小，等于0时使用默认值，默认值为CPU数量*100
+```
 
 ## AI客户端推荐
 > [!NOTE]
