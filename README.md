@@ -49,6 +49,7 @@ git clone git@github.com:VoAPI/VoAPI.git
 cd VoAPI
 docker-compose up -d
 ```
+部署完成后，访问 http://localhost:6800 （请根据实际情况修改域名和端口号）即可进入系统，注册第一个用户即为管理员账号
 
 ## 配置文件
 - config.yml
