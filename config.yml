@@ -1,0 +1,12 @@
+app:
+  port: 6800 # 应用监听端口
+mysql:
+  dsn: root:@tcp(db-voapi:3306)/voapi # 主数据据库
+  log-dsn: root:@tcp(db-voapi:3306)/voapi-log # 日志分离数据库
+  log-body-dsn: root:@tcp(db-voapi:3306)/voapi-body-log # 请求体日志分离数据库
+  log-sharding: # 日志分表方式，支持 day/week/month/year 四种方式
+    enable: false
+    mode: y # d = day, w = week, m = month, y = year
+redis:
+  dsn: redis://redis-voapi:6379/0
+  pool-size: 0 #redis连接池大小，等于0时使用默认值，默认值为CPU数量*100
