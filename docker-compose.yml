@@ -46,7 +46,7 @@ services:
     volumes:
       - ./config.yml:/config.yml             
     ports:
-      - "6900:6800"
+      - "6800:6800"
 
 networks:
   network:
