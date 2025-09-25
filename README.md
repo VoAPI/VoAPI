@@ -45,7 +45,7 @@
 ## 部署
 ### Docker Compose部署
 ```sh 
-git clone git@github.com:VoAPI/VoAPI.git
+git clone https://github.com/VoAPI/VoAPI.git
 cd VoAPI
 docker-compose up -d
 ```
