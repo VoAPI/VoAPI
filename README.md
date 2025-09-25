@@ -51,6 +51,12 @@ docker-compose up -d
 ```
 部署完成后，访问 http://localhost:6800 （请根据实际情况修改域名和端口号）即可进入系统，注册第一个用户即为管理员账号
 
+### Docker 单容器部署
+> 请确保您已经准备好了MySQL和Redis数据库，并且正确配置了config.yml文件
+```sh
+docker run -d --name voapi --restart always -p 6800:6800 -e TZ=Asia/Shanghai -v ./config.yml:/config.yml voapi/voapi:latest
+```
+
 ## 配置文件
 - config.yml
 ```yaml
