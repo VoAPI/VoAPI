@@ -1,0 +1,43 @@
+services:
+
+  redis-voapi:
+    image: redis:latest
+    container_name: redis-voapi
+    restart: always
+        
+  db-voapi:
+    image: mysql:8.2.0
+    restart: always
+    container_name: db-voapi
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./data:/var/lib/mysql  # 挂载目录，持久化存储
+    environment:
+      TZ: Asia/Shanghai   # 设置时区
+      MYSQL_ROOT_PASSWORD: '' # 设置 root 用户的密码
+      MYSQL_USER: voapi   # 创建专用用户
+      MYSQL_PASSWORD: ''    # 设置专用用户密码
+      MYSQL_DATABASE: voapi   # 自动创建数据库
+    command: --max_connections=50000 --innodb-redo-log-capacity=20G
+
+  voapi-app:
+    image: alpine:latest     
+    container_name: voapi-app
+    depends_on:
+      - db-voapi
+      - redis-voapi
+    working_dir: /app
+    hostname: voapi-1
+    environment:
+      VO_SK:
+    volumes:
+      - ./app:/app             
+    command: ["./voapi-linux-amd64"]
+    ports:
+      - "6800:6800"
+    restart: unless-stopped
+
+networks:
+  network:
+    external: true 
