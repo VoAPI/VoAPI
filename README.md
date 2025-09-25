@@ -54,7 +54,7 @@ docker-compose up -d
 ### Docker 单容器部署
 > 请确保您已经准备好了MySQL和Redis数据库，并且正确配置了config.yml文件
 ```sh
-docker run -d --name voapi --restart always -p 6800:6800 -e TZ=Asia/Shanghai -v ./config.yml:/config.yml voapi/voapi:latest
+docker run -d --name voapi --restart always -p 6800:6800 -e TZ=Asia/Shanghai -v ./config.yml:/config.yml -v ./file:/file voapi/voapi:latest
 ```
 
 ## 配置文件

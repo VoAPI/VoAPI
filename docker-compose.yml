@@ -44,7 +44,8 @@ services:
       redis-voapi:
         condition: service_healthy
     volumes:
-      - ./config.yml:/config.yml             
+      - ./config.yml:/config.yml    
+      - ./file:/file       
     ports:
       - "6800:6800"
 
