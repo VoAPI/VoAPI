@@ -43,7 +43,12 @@
 |实际功能不止上述描述，快去体验体验吧～|✅|✅|
 
 ## 部署
+### 架构镜像
+- Linux amd64: `voapi/voapi`
+- Linux arm64: `voapi/voapi-linux-arm64`
+
 ### Docker Compose部署
+> linux-arm64用户请将docker-compose.yml中的镜像替换为`voapi/voapi-linux-arm64`
 ```sh 
 git clone https://github.com/VoAPI/VoAPI.git
 cd VoAPI
@@ -53,6 +58,8 @@ docker-compose up -d
 
 ### Docker 单容器部署
 > 请确保您已经准备好了MySQL和Redis数据库，并且正确配置了config.yml文件
+
+> linux-arm64用户请将镜像替换为`voapi/voapi-linux-arm64`
 ```sh
 docker run -d --name voapi --restart always -p 6800:6800 -e TZ=Asia/Shanghai -v ./config.yml:/config.yml -v ./file:/file -v ./public:/public voapi/voapi:latest
 ```
