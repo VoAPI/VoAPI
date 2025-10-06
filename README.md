@@ -1,3 +1,6 @@
+简体中文 | [English](./README_EN.md)
+
+
 [![./images/head.png](./images/head.png)](https://demo.voapi.top)
 
 **🎉VoAPI全新架构V1.0已全量发布**
