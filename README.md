@@ -1,12 +1,16 @@
 简体中文 | [English](./README_EN.md)
 
+<div align="center">
+<img alt="logo" height="120" src="./images/logo.png" width="120"/>
+</div>
 
-[![./images/head.png](./images/head.png)](https://demo.voapi.top)
+<div align="center">
+<h1>VoAPI</h1>
+<p>🎉 全新下一代高颜值、高性能、高扩展的智能AI大模型API聚合分发系统</p>
+</div>
 
-**🎉VoAPI全新架构V1.0已全量发布**
+
 ## 介绍
-全新的高颜值、高性能、高扩展的AI模型接口管理与分发系统
-
 |功能|社区版|Pro版|
 |-|-|-|
 |基础功能|✅|✅|
@@ -113,6 +117,7 @@ redis:
 
 ## 界面截图
 ### PC端
+![](./images/dash.png)
 ![](./images/1.png)
 ![](./images/2.png)
 ![](./images/3.png)

@@ -1,11 +1,16 @@
 [简体中文](./README.md) | English
 
-[![./images/head.png](./images/head.png)](https://demo.voapi.top)
+<div align="center">
+<img alt="logo" height="120" src="./images/logo.png" width="120"/>
+</div>
 
-**🎉VoAPI's new architecture V1.0 has been fully released**
+<div align="center">
+<h1>VoAPI</h1>
+<p>🎉 A new next-generation high-value, high-performance, and highly scalable intelligent AI large-model API aggregation and distribution system</p>
+</div>
+
+
 ## Introduction
-A brand-new, high-performance, and scalable AI model interface management and distribution system
-
 |Features|Community Edition|Pro Edition|
 |-|-|-|
 |Basic Features|✅|✅|
@@ -112,6 +117,7 @@ redis:
 
 ## Screenshots
 ### PC
+![](./images/dash-en.png)
 ![](./images/1.png)
 ![](./images/2.png)
 ![](./images/3.png)
