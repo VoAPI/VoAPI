@@ -7,6 +7,7 @@
 <div align="center">
 <h1>VoAPI</h1>
 <p>🎉 全新下一代高颜值、高性能、高扩展的智能AI大模型API聚合分发系统</p>
+<p><a href="https://www.producthunt.com/products/voapi-next-generation-ai-gateway?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-voapi" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1023360&theme=light&t=1759824265149" alt="VoAPI - Next&#0045;generation&#0032;AI&#0032;model&#0032;intelligent&#0032;gateway | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a></p>
 </div>
 
 
