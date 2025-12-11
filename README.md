@@ -79,13 +79,26 @@ docker run -d --name voapi --restart always -p 6800:6800 -e TZ=Asia/Shanghai -v 
 ```yaml
 app:
   port: 6800 # 应用监听端口
-mysql:
+db:
+  dirver: mysql #为空则默认使用mysql，可选mysql,pg
+  log-dirver: mysql #为空则默认使用mysql，可选mysql,pg,clickhouse
+mysql: #当db.dirver/db.log-dirver为空或mysql时生效
   dsn: root:@tcp(db-voapi:3306)/voapi # 主数据据库
   log-dsn: root:@tcp(db-voapi:3306)/voapi-log # 日志分离数据库
   log-body-dsn: root:@tcp(db-voapi:3306)/voapi-body-log # 请求体日志分离数据库
   log-sharding: # 日志分表方式，支持 day/week/month/year 四种方式
     enable: false
     mode: y # d = day, w = week, m = month, y = year
+pg: #当db.dirver/db.log-dirver为pg时生效
+  dsn: host=127.0.0.1 port=5432 user=default dbname=voapi # 主数据据库
+  log-dsn: host=127.0.0.1 port=5432 user=default dbname=voapi # 日志分离数据库
+  log-body-dsn: host=127.0.0.1 port=5432 user=default dbname=voapi # 请求体日志分离数据库
+  log-sharding: # 日志分表方式，支持 day/week/month/year 四种方式
+    enable: false
+    mode: y # d = day, w = week, m = month, y = year
+clickhouse: #当db.dirver/db.log-dirver为clickhouse时生效
+  log-dsn: clickhouse://default:password@127.0.0.1:9000/voapi?dial_timeout=10s&read_timeout=20s # 日志分离数据库
+  log-body-dsn: clickhouse://default:password@127.0.0.1:9000/voapi?dial_timeout=10s&read_timeout=20s # 请求体日志分离数据库
 redis:
   dsn: redis://redis-voapi:6379/0
   pool-size: 0 #redis连接池大小，等于0时使用默认值，默认值为CPU数量*100

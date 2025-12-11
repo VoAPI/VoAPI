@@ -78,17 +78,30 @@ docker run -d --name voapi --restart always -p 6800:6800 -e TZ=Asia/Shanghai -v 
 - config.yml
 ```yaml
 app:
-    port: 6800 # Application listening port
-mysql:
-    dsn: root:@tcp(db-voapi:3306)/voapi # Primary database
-    log-dsn: root:@tcp(db-voapi:3306)/voapi-log # Log sharding database
-    log-body-dsn: root:@tcp(db-voapi:3306)/voapi-body-log # Request body log sharding database
-    log-sharding: # Log sharding, supports day/week/month/year
-        enable: false
-        mode: y # d = day, w = week, m = month, y = year
+  port: 6800 # Application listening port
+db:
+  dirver: mysql # Default is mysql if empty, options: mysql, pg
+  log-dirver: mysql # Default is mysql if empty, options: mysql, pg, clickhouse
+mysql: # Takes effect when db.dirver/db.log-dirver is empty or mysql
+  dsn: root:@tcp(db-voapi:3306)/voapi # Primary database
+  log-dsn: root:@tcp(db-voapi:3306)/voapi-log # Log separation database
+  log-body-dsn: root:@tcp(db-voapi:3306)/voapi-body-log # Request body log separation database
+  log-sharding: # Log sharding mode, supports day/week/month/year
+    enable: false
+    mode: y # d = day, w = week, m = month, y = year
+pg: # Takes effect when db.dirver/db.log-dirver is pg
+  dsn: host=127.0.0.1 port=5432 user=default dbname=voapi # Primary database
+  log-dsn: host=127.0.0.1 port=5432 user=default dbname=voapi # Log separation database
+  log-body-dsn: host=127.0.0.1 port=5432 user=default dbname=voapi # Request body log separation database
+  log-sharding: # Log sharding mode, supports day/week/month/year
+    enable: false
+    mode: y # d = day, w = week, m = month, y = year
+clickhouse: # Takes effect when db.dirver/db.log-dirver is clickhouse
+  log-dsn: clickhouse://default:password@127.0.0.1:9000/voapi?dial_timeout=10s&read_timeout=20s # Log separation database
+  log-body-dsn: clickhouse://default:password@127.0.0.1:9000/voapi?dial_timeout=10s&read_timeout=20s # Request body log separation database
 redis:
-    dsn: redis://redis-voapi:6379/0
-    pool-size: 0 #Redis connection pool size. If it's 0, the default value is used, which is the number of CPUs * 100.
+  dsn: redis://redis-voapi:6379/0
+  pool-size: 0 # Redis connection pool size. If it's 0, the default value is used, which is the number of CPUs * 100
 ```
 
 ## Quickly Configure Your First Channel in the Backend
