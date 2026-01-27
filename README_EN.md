@@ -49,7 +49,22 @@
 |Log table sharding (automatically sharded by day/week/month/year) |✅|✅|
 |i18n internationalization (built-in Chinese and English) |✅|✅|
 |Model multi-conditional billing (tiered billing) is supported, with both fixed-price and basic multiplier pricing options |✅|✅|
-|Pro-exclusive features, not yet announced |❌|✅|
+|Online payment support (Easypay, Stripe, self-service transfer, etc.)|❌|✅|
+|Custom multi-currency support|❌|✅|
+|Automatic payment exchange rate conversion, internal or payment interface conversion|❌|✅|
+|Online self-service invoicing|❌|✅|
+|Personal and enterprise real-name authentication (supports third-party API, Alipay official authentication, manual authentication, etc.)|❌|✅|
+|Marketing notifications, mass messaging, asynchronous and scheduled sending, etc.|❌|✅|
+|Powerful ticket system|❌|✅|
+|User-customizable rates and permissions|❌|✅|
+|High-performance, highly scalable dynamic routing: 0s instant hot reload, multi-group, multi-upstream load balancing, multi-route business processors, etc.|❌|✅|
+|Invite friends mechanism|❌|✅|
+|Powerful third-party object storage transfer|❌|✅|
+|Custom multi-frontend languages: built-in CN, EN|❌|✅|
+|Online MCP service distribution support|❌|✅|
+|Multi-dimensional user behavior, data model, and other data visualization analysis reports|❌|✅|
+|Cloud rule marketplace, various fun model integrations with one-click access|❌|✅|
+|Pro-exclusive features, more coming soon, stay tuned~|❌|✅|
 |Actual features extend beyond the description above. Come experience it! |✅|✅|
 
 ## Deployment
